@@ -21,6 +21,9 @@ DATABASE_URL = "mysql+pymysql://{user}:{password}@{host}:{port}/{name}".format(
     name='mkinfo'
 )
 
+
+
+
 # SQLAlchemy konfiguratsiyasi
 engine = create_engine(DATABASE_URL, pool_size=10, max_overflow=20)  # Pool parametrlarini qo'shish
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -50,7 +53,8 @@ origins = [
     "https://backend-market.tmsiti.uz",  # Sizning veb-saytingiz yoki kerakli domenlar
     "http://localhost:3000",
     "https://new-catalog.vercel.app",
-    "https://www.mkinfo.uz",
+    "https://mk.mkinfo.uz",
+    "https://www.mk.mkinfo.uz",
 ]
 app.add_middleware(
     CORSMiddleware,
